@@ -9,10 +9,20 @@ folder structures.
 
 # Install
 
-To install, either build from source or `cargo install --git https://github.com/afouch1/velcro.git`. 
+To install, either build from source or 
 
-To use simply navigate to the location where you wish to create the folders
-and `velcro /path/to/config.yml`. 
+```bash
+ > cargo install --git https://github.com/afouch1/velcro.git
+``` 
+
+To use simply navigate to the location where you wish to create the folders and 
+
+```bash
+ > velcro /path/to/config.yml /optional/path/to/new/folder
+``` 
+
+If the second argument is given, the folders
+will be created in the directory provided, as opposed to the current working directory. 
 
 # Config File
 
@@ -23,6 +33,10 @@ with the following rules:
  - Only strings and arrays of strings are allowed except in the top level document
  - The top level document must contain an item called `folders` that represents the folder hierarchy.
  - All other top level items are "named groups" to reuse given folder structures
+
+**Note** that named groups should *not* be recursive or have circular references, as 
+the OS will try to create the same folder twice. This will result in an OS error: 
+"File or Folder already exists". 
 
 An example configuration:
 
@@ -39,7 +53,7 @@ folders:
 
 movie:
     - screenshots
-    - movie
+    - video
     - reviews
 
 genres:
