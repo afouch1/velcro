@@ -28,24 +28,24 @@ An example configuration:
 
 ```yaml
 folders: 
- - Movies:
-   - Iron Man:
-     - movie
-   - "Avengers: Endgame": # Note the quotation marks since our movie contains a colon
-     - movie
- - Music
-   - genres
- - Images
+    - Movies:
+        - Iron Man:
+            - movie
+        - "Avengers: Endgame": # Note the quotation marks since our movie contains a colon
+            - movie
+    - Music:
+        - genres
+    - Images
 
 movie:
- - screenshots
- - movie
- - reviews
+    - screenshots
+    - movie
+    - reviews
 
 genres:
- - Rock
- - Jazz
- - Extreme Death Metal
+    - Rock
+    - Jazz
+    - Extreme Death Metal
 ```
 
 This will create a folder structure as the following:
@@ -54,16 +54,16 @@ This will create a folder structure as the following:
 .
 ├── Images
 ├── Movies
-│   ├── Avengers:\ Endgame
+│   ├── Avengers: Endgame
 │   │   ├── reviews
 │   │   ├── screenshots
 │   │   └── video
-│   └── Iron\ Man
+│   └── Iron Man
 │       ├── reviews
 │       ├── screenshots
 │       └── video
 └── Music
-    ├── Extreme\ Death\ Metal
+    ├── Extreme Death Metal
     ├── Jazz
     └── Rock
 ```
