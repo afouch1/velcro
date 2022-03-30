@@ -25,6 +25,10 @@ fn main() {
     let text = fs::read_to_string(&args[1])
         .expect("Unable to read config file");
 
+    if let Some(new_directory) = args.get(2) {
+        env::set_current_dir(new_directory).expect(format!("Unable to move directory {}", new_directory).as_str())
+    }
+
     // Alert the user a success message or a yaml parsing error
     let message = match YamlLoader::load_from_str(text.as_str()) {
         Ok(docs) => begin(&docs[0]),
