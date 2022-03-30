@@ -1,0 +1,19 @@
+folders:
+    - Movies:
+        - Iron Man:
+            - movie
+        - "Avengers: Endgame": # Note the quotation marks since our movie contains a colon
+            - movie
+    - Music:
+        - genres
+    - Images
+
+movie:
+    - screenshots
+    - video
+    - reviews
+
+genres:
+    - Rock
+    - Jazz
+    - Extreme Death Metal
