@@ -1,0 +1,12 @@
+folders:
+  - one
+  - two
+  - three:
+      - places
+      - inner_three
+      - inner_three2:
+         - inner_three2_inner
+
+places:
+  - north
+  - south
