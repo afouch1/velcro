@@ -54,13 +54,16 @@ This will create a folder structure as the following:
 .
 ├── Images
 ├── Movies
-│   ├── Avengers: Endgame
+│   ├── Avengers:\ Endgame
 │   │   ├── reviews
 │   │   ├── screenshots
 │   │   └── video
-│   └── Iron Man
+│   └── Iron\ Man
 │       ├── reviews
 │       ├── screenshots
 │       └── video
-└── Music - genres
+└── Music
+    ├── Extreme\ Death\ Metal
+    ├── Jazz
+    └── Rock
 ```
